@@ -4,6 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
             crossorigin="anonymous">
@@ -12,8 +14,10 @@
     <title>Calculator</title>
 </head>
 <body>
-    <div>
-        <h1 id="title" >Calculator</h1>
+    <div class="container-fluid p-3 mb-2 bg-info text-dark">
+            <div class ="col-md-12">
+                <p class="fw-bold fs-1 p-3 mb-2 bg-info text-dark">Calculator</p>
+            </div>
         <br>
         <table id="tbl">
             <tr>
@@ -21,42 +25,55 @@
             </tr>
             <tr>
                 <td>
-                <button class="button" value="7">7</button>
-                <button class="button" value="8">8</button>
-                <button class="button" value="9">9</button>
-                <button class="button" value="/">/</button>
+                <button class="btn btn-primary button" value="7">7</button>
+                <button class="btn btn-primary button" value="8">8</button>
+                <button class="btn btn-primary button" value="9">9</button>
+                <button class="btn btn-primary button" value="/">/</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                <button class="button" value="4">4</button>
-                <button class="button" value="5">5</button>
-                <button class="button" value="6">6</button>
-                <button class="button" value="*">*</button>
+                <button class="btn btn-primary button" value="4">4</button>
+                <button class="btn btn-primary button" value="5">5</button>
+                <button class="btn btn-primary button" value="6">6</button>
+                <button class="btn btn-primary button" value="*">*</button>
                 </td>
             </tr>  
             <tr>
                 <td>
-                <button class="button" value="3">3</button>
-                <button class="button" value="2">2</button>
-                <button class="button" value="1">1</button>
-                <button class="button" value="-">-</button>
+                <button class="btn btn-primary button" value="3">3</button>
+                <button class="btn btn-primary button" value="2">2</button>
+                <button class="btn btn-primary button" value="1">1</button>
+                <button class="btn btn-primary button" value="-">-</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                <button class="button" value="c">C</button>
-                <button class="button" value="0">0</button>
-                <button class="button" value="=">=</button>
-                <button class="button" value="+">+</button>
+                <button class="btn btn-primary button" value=".">.</button>
+                <button class="btn btn-primary button" value="0">0</button>
+                <button class="btn btn-primary button" value="=">=</button>
+                <button class="btn btn-primary button" value="+">+</button>
                 </td>
             </tr>    
             <tr>
                 <td>
-                    <button class="button" value=".">.</button>
+                    <button class="btn btn-primary button" value="c">C</button>
                 </td>
             </tr>                              
         </table>
+        <div class="dropdown">
+            <button class="dropdown-toggle btn btn-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Currency
+            </button>
+            <ul class="dropdown-menu" id="currencies" aria-labelledby="dropdownMenuButton1">
+            </ul>
+            
+            <button class="dropdown-toggle btn btn-primary" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" disabled>
+                Date
+            </button>
+            <ul class="dropdown-menu" id="dates" aria-labelledby="dropdownMenuButton2">
+            </ul>
+          </div>
     </div>
 </body>
 </html>
